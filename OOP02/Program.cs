@@ -64,6 +64,30 @@
             #endregion
 
 
+            // Class
+            #region Part 01 : Theoretical Questions - Classes
+
+            #region Question 1
+            //Answer the following questions:
+            //a) What is the difference between a class and a struct?
+            //b) Why are classes more suitable than structs for large applications?
+
+            // 1- Struct is value type and Class is reference type, the Struct objects is stored in th stack (short lived and lightweight objects due to memory size)
+            // but the Class objects is stored in heap (complex data )
+            // Struct doesn't support inhertiance but Class support the 4 pillars (Encapsulation -  Inhertiacne - Polymorphism - Abstraction)
+
+
+            // 2- Class objects is stored in heap and the object can store a lot of complex data and memory is dynamically allocated
+            // but the struct is limited to it's size that can lead to stack overflow
+
+            #endregion
+
+
+            #endregion
+
+
+
+
         }
     }
 }
