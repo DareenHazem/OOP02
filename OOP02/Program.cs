@@ -221,6 +221,12 @@
 
             #endregion
 
+            // After Converting into Class - Adding Classes
+            #region Demonstrate Class Relationships
+            //StandardShipment SS = new("WDERS", "Order 1", 57.5, 8557, new("Cairo", "Street 1", 5));
+            //ExpressShipment ES = new(895,"WDERS", "Order 1", 57.5, 8557, new("Cairo", "Street 1", 5));
+            //InternationalShipment IS = new("Egypt",809,"WDERS", "Order 1", 57.5, 8557, new("Cairo", "Street 1", 5));
+            #endregion
 
         }
     }
