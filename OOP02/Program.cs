@@ -96,7 +96,122 @@
             #endregion
             #endregion
 
+            #region Indexer Main
 
+            #region Queations a b c d e f g
+            ////a
+            //DeliveryCenter deliveryCenter = new DeliveryCenter();
+
+
+            ////-----------------------READ DATA------------------------
+            ////b
+            //int size = 3;
+            //for (int i = 0; i < size; i++)
+
+            //{
+            //    Console.Write($"Enter Shipment {i + 1} Data\n");
+
+            //    string TrackC;
+            //    do
+            //    {
+            //        Console.Write("Enter Tracking Code: ");
+            //        TrackC = Console.ReadLine();
+            //    }
+            //    while (string.IsNullOrWhiteSpace(TrackC));
+
+            //    string Desc;
+            //    do
+            //    {
+            //        Console.Write("Enter Description: ");
+            //        Desc = Console.ReadLine();
+            //    }
+            //    while (string.IsNullOrWhiteSpace(Desc));
+
+            //    double w;
+            //    bool isparsed;
+            //    do
+            //    {
+            //        Console.Write("Enter Weight: ");
+            //        isparsed = double.TryParse(Console.ReadLine(), out w);
+            //    }
+            //    while (!isparsed);
+
+            //    decimal d;
+            //    do
+            //    {
+            //        Console.Write("Enter Delivery Fee: ");
+            //        isparsed = decimal.TryParse(Console.ReadLine(), out d);
+            //    }
+            //    while (!isparsed);
+
+            //    string ct;
+            //    do
+            //    {
+            //        Console.Write("Enter City: ");
+            //        ct = Console.ReadLine();
+            //    }
+            //    while (string.IsNullOrWhiteSpace(ct));
+
+            //    string st;
+            //    do
+            //    {
+            //        Console.Write("Enter Street: ");
+            //        st = Console.ReadLine();
+            //    }
+            //    while (string.IsNullOrWhiteSpace(st));
+
+            //    int bn;
+            //    do
+            //    {
+            //        Console.Write("Enter Building Number: ");
+            //        isparsed = int.TryParse(Console.ReadLine(), out bn);
+            //    }
+            //    while (!isparsed);
+
+            //    Console.WriteLine();
+
+
+            //    //c
+            //    //-----------------------ADD SHIPMENT------------------------
+            //    Shipment ship = new(TrackC, Desc, w, d, new(ct, st, bn));
+            //    deliveryCenter.AddShipment(ship);
+            //}
+
+            ////-----------------------PRINT------------------------
+
+            ////d
+            //Console.Clear();
+            //Console.WriteLine($"All Shipments");
+            //for (int j = 0; j < size; j++)
+            //{
+            //    Console.WriteLine($"Shipment Data {j + 1}");
+            //    deliveryCenter[j].PrintShipment();
+            //    Console.WriteLine();
+            //}
+
+            ////-----------------------SEARCH------------------------
+            //string TrackCode;
+            //do
+            //{
+            //    Console.WriteLine("Enter a tracking code to search:");
+            //    TrackCode = Console.ReadLine();
+            //}
+            //while (string.IsNullOrWhiteSpace(TrackCode));
+
+            //if (deliveryCenter[TrackCode].Equals(default(Shipment)))
+            //{
+            //    Console.WriteLine($"Shipment not found {TrackCode}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("found");
+            //}
+
+            #endregion
+
+
+
+            #endregion
 
 
         }
