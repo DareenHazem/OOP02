@@ -36,7 +36,7 @@ namespace OOP02
                 {
                     for (int i = 0; i < array.Length; i++)
                     {
-                        if (array[i].TrackingCode  == Code)
+                        if (array[i] != null && array[i].TrackingCode  == Code)
                             return array[i];
                     }
                 }
@@ -50,7 +50,7 @@ namespace OOP02
             {
                 for (int i = 0; i < array.Length; i++)
                 {
-                    if (string.IsNullOrEmpty(array[i].TrackingCode))
+                    if (array[i] == null)
                     {
                         array[i] = ship;
                         return true;
@@ -84,7 +84,12 @@ namespace OOP02
         {
             foreach (Shipment shipment in array)
             {
-                shipment.PrintShipment();
+                if (shipment != null)
+                {
+                    shipment.PrintShipment();
+                    Console.WriteLine();
+                }
+                    
             }
         }
 

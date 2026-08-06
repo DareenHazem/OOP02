@@ -228,6 +228,211 @@
             //InternationalShipment IS = new("Egypt",809,"WDERS", "Order 1", 57.5, 8557, new("Cairo", "Street 1", 5));
             #endregion
 
+            #region Class Main
+            // 1- Create a DeliveryCenter.
+            DeliveryCenter deliveryCenter = new DeliveryCenter();
+
+            //2- Read the center name from the user.
+            string centerName;
+            do
+            {
+                Console.Write("Enter center Name: ");
+                centerName = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(centerName));
+
+
+            //3- Create one StandardShipment.
+            StandardShipment SS;
+
+            //4- Create one ExpressShipment.
+            ExpressShipment ES;
+
+            //5- Create one InternationalShipment.
+            InternationalShipment IS;
+
+            //6- Read all shipment data from the user.
+            //7-Add the shipments to the delivery center.
+            #region StandardShipment
+            Console.WriteLine("\nEnter Standard Shipment Data");
+            string TrackC;
+            do
+            {
+                Console.Write("Enter Tracking Code: ");
+                TrackC = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(TrackC));
+
+            string Desc;
+            do
+            {
+                Console.Write("Enter Description: ");
+                Desc = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(Desc));
+
+            double w;
+            bool isParsed;
+            do
+            {
+                Console.Write("Enter Weight: ");
+                isParsed = double.TryParse(Console.ReadLine(), out w);
+            }
+            while (!isParsed);
+
+            decimal d;
+            do
+            {
+                Console.Write("Enter Delivery Fee: ");
+                isParsed = decimal.TryParse(Console.ReadLine(), out d);
+            }
+            while (!isParsed);
+
+            StandardShipment standardShipment = new StandardShipment(TrackC, Desc, w, d, new DeliveryAddress(centerName, "Street 7", 5));
+            deliveryCenter.AddShipment(standardShipment);
+            #endregion
+
+            #region ExpressShipment
+            Console.WriteLine("\nEnter Express Shipment Data");
+
+            do
+            {
+                Console.Write("Enter Tracking Code: ");
+                TrackC = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(TrackC));
+
+            do
+            {
+                Console.Write("Enter Description: ");
+                Desc = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(Desc));
+
+            do
+            {
+                Console.Write("Enter Weight: ");
+                isParsed = double.TryParse(Console.ReadLine(), out w);
+            }
+            while (!isParsed);
+
+            do
+            {
+                Console.Write("Enter Delivery Fee: ");
+                isParsed = decimal.TryParse(Console.ReadLine(), out d);
+            }
+            while (!isParsed);
+
+            decimal Extrafee;
+            do
+            {
+                Console.Write("Enter Extrafee: ");
+                isParsed = decimal.TryParse(Console.ReadLine(), out Extrafee);
+            }
+            while (!isParsed);
+
+
+            ExpressShipment expressShipment = new ExpressShipment(Extrafee, TrackC, Desc, w, d, new DeliveryAddress(centerName, "Street 988", 1));
+            deliveryCenter.AddShipment(expressShipment);
+
+            #endregion
+
+            #region InternationalShipment
+            Console.WriteLine("\nEnter International Shipment Data");
+            do
+            {
+                Console.Write("Enter Tracking Code: ");
+                TrackC = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(TrackC));
+
+            do
+            {
+                Console.Write("Enter Description: ");
+                Desc = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(Desc));
+
+            do
+            {
+                Console.Write("Enter Weight: ");
+                isParsed = double.TryParse(Console.ReadLine(), out w);
+            }
+            while (!isParsed);
+
+            do
+            {
+                Console.Write("Enter Delivery Fee: ");
+                isParsed = decimal.TryParse(Console.ReadLine(), out d);
+            }
+            while (!isParsed);
+
+            string destinationCountry;
+            do
+            {
+                Console.Write("Enter Destination Country: ");
+                destinationCountry = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(destinationCountry));
+
+            decimal customsFee;
+            do
+            {
+                Console.Write("Enter Customs Fee: ");
+                isParsed = decimal.TryParse(Console.ReadLine(), out customsFee);
+            }
+            while (!isParsed);
+
+            InternationalShipment internationalShipment = new InternationalShipment(destinationCountry, customsFee, TrackC, Desc, w, d, new DeliveryAddress(centerName, "Street 413", 123));
+            deliveryCenter.AddShipment(internationalShipment);
+
+            #endregion
+
+            // 8- Print all shipments.
+               Console.Clear();
+               deliveryCenter.PrintAllShipments();
+
+            //9- 
+            do
+            {
+                Console.WriteLine("\nEnter a tracking code to search:");
+                TrackC = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(TrackC));
+
+            if (deliveryCenter[TrackC]== default)
+            {
+                Console.WriteLine($"Shipment not found {TrackC}");
+            }
+            else
+            {
+                Console.WriteLine("found");
+            }
+
+            //10 - Remove one shipment using its tracking code.
+            Console.WriteLine("\nEnter Tracking Code to Remove");
+            do
+            {
+                Console.Write("Enter Tracking Code: ");
+                TrackC = Console.ReadLine();
+            }
+            while (string.IsNullOrWhiteSpace(TrackC));
+
+            if (deliveryCenter.RemoveShipment(TrackC))
+            {
+                Console.WriteLine("Shipment Removed Successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Shipment not found.");
+            }
+
+            //11- Print the remaining shipments.
+            Console.WriteLine("\nRemaining Shipments");
+            deliveryCenter.PrintAllShipments();
+
+            #endregion
+
         }
     }
 }
