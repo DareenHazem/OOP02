@@ -209,7 +209,15 @@
 
             #endregion
 
-
+            #region Demonstrate the DeliveryAddress struct copy behavior
+            //Console.WriteLine("--- Struct Copy Test ---");
+            //DeliveryAddress delivery01 = new("Cairo", "Tahrir Street", 15);
+            //DeliveryAddress delivery02 = delivery01;
+            //delivery02.street = "Makram Ebeid Street";
+            //delivery02.buildingNumber = 20;
+            //Console.WriteLine($"Original Address: { delivery01.GetFullAddress()}");
+            //Console.WriteLine($"Copied Address: {delivery02.GetFullAddress()}");
+            #endregion
 
             #endregion
 
