@@ -29,6 +29,12 @@ namespace OOP02
         }
         #endregion
 
-       
+        #region Methods
+        public override void PrintShipment()
+        {
+            base.PrintShipment();
+            Console.WriteLine($"Extra Fee: {ExtraFee}");
+        }
+        #endregion
     }
 }
