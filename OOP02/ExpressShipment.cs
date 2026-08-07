@@ -16,7 +16,7 @@ namespace OOP02
             set { extraFee = value >= 0 ? value : 0; }
         }
 
-        public decimal EstimatedCost
+        public override decimal EstimatedCost
         {
             get { return DeliveryFee + ExtraFee + (decimal)(Weight * 5) ; }
         }
