@@ -433,6 +433,26 @@
 
             #endregion
 
+            #region Assignment 3 
+
+            #region Part 01 — Theoretical Questions
+
+            #region Question 01
+            //Q1 Overloading, Overriding, and Binding
+            //a) What is the difference between Method Overloading and Method Overriding?
+            //b) What is the difference between Static Binding and Dynamic Binding?
+
+            // 1- Overloading is multiple methods with the same name but (different paramters - datatypes - order)
+            // Overriding allows the child class to have a specific implemantion of a method that is already in the parent class
+
+            // 2- Static binding is resolved in the compile time the compiler decided by the reference type by using(new or nothig)
+            // Dynamic Binding is resolved in the run time the runtime decided by the object type by using(virtual and override)
+            #endregion
+
+            #endregion
+            #endregion
+
+
         }
     }
 }
