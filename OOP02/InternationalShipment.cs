@@ -44,6 +44,11 @@ namespace OOP02
             Console.WriteLine($"Destination Country: {DestinationCountry}");
             Console.WriteLine($"Customs Fee: {CustomsFee}");
         }
+
+        public virtual void GenerateCustomsReport()
+        {
+            Console.WriteLine($"Customs Report\n Customs Fee: {CustomsFee}");
+        }
         #endregion
     }
 }
