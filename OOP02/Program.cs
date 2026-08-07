@@ -461,6 +461,73 @@
             #endregion
 
             #endregion
+
+            #region Part 02 -Practical
+
+            #region Main
+            //a
+            Driver driver = new Driver(1, "Ahmed Mohamed", "01012345678");
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine($"Driver: {driver.FullName}");
+            Console.WriteLine("----------------------------------------------");
+            // b
+            DeliveryCenter deliverycenter = new DeliveryCenter();
+            // c
+            deliverycenter.Driver = driver;
+            //d
+            StandardShipment SS = new StandardShipment("AFEP", "Order 3", 583.5, 5820, new DeliveryAddress("Cairo", "Street 1", 1));
+            // e
+            ExpressShipment ES = new ExpressShipment(25, "IDFX", "Order 2", 388.978, 10820, new DeliveryAddress("Giza", "Street 2", 2));
+            // f
+            InternationalShipment IS = new InternationalShipment("Egypt", 1, "QWZX", "Order 3", 8892.63, 15890, new DeliveryAddress("Alex", "Street 3", 3));
+            // g
+            deliverycenter.AddShipment(SS);
+            deliverycenter.AddShipment(ES);
+            deliverycenter.AddShipment(IS);
+            // h
+            Console.WriteLine("\n==============================================");
+            Console.WriteLine("Printing All Shipments");
+            Console.WriteLine("==============================================");
+            deliverycenter.PrintAllShipments();
+            // i
+            Console.WriteLine("\n==============================================");
+            Console.WriteLine("Printing Using Delivery Helper...");
+            Console.WriteLine("==============================================");
+            DeliveryHelper.PrintShipmentDetails(SS);
+            Console.WriteLine();
+            DeliveryHelper.PrintShipmentDetails(ES);
+            Console.WriteLine();
+            DeliveryHelper.PrintShipmentDetails(IS);
+            // j
+            Console.WriteLine("\n==============================================");
+            Console.WriteLine("Updating Weight");
+            Console.WriteLine("==============================================");
+            SS.UpdateWeight(10);
+            ES.UpdateWeight(8, 2);
+            Console.WriteLine($"Standard Shipment Class Weight : {SS.Weight}");
+            Console.WriteLine($"Express Shipment Class Weight : {ES.Weight}");
+            Console.WriteLine("----------------------------------------------");
+            // k
+            Console.WriteLine("\n==============================================");
+            Console.WriteLine("Printing Using Shipment Array");
+            Console.WriteLine("==============================================");
+            Shipment[] shipments = {SS,ES,IS};
+            foreach(Shipment shipment in shipments)
+            {
+                shipment.PrintShipment();
+                Console.WriteLine();
+            }
+            // l
+            Console.WriteLine("\n==============================================");
+            Console.WriteLine("Sealed Class and Sealed Method");
+            Console.WriteLine("==============================================");
+            CompletedShipment completedShipment = new CompletedShipment("QYZE", "Order 4", 996.8, 7741, new DeliveryAddress("Zagazig", "Street 4", 4));
+            PriorityInternationalShipment PIS = new PriorityInternationalShipment("Egypt", 5, "OUVD", "Order 5", 6856.378, 77456, new DeliveryAddress("Nasr City", "Street 5", 5));
+            PIS.GenerateCustomsReport();
+            #endregion
+
+            #endregion
+
             #endregion
 
 

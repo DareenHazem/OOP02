@@ -10,6 +10,8 @@ namespace OOP02
         String CenterName;
 
         #region Properties 
+         public Driver Driver { get; set; }
+
         public Shipment this[int index] {
             get
             {
