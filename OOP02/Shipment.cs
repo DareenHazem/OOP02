@@ -39,7 +39,7 @@ namespace OOP02
             get { return deliveryFee; }
             private set { deliveryFee = value; }
         }
-        public decimal EstimatedCost
+        public virtual decimal EstimatedCost
         {
             get { return DeliveryFee + (decimal)(Weight * 5); }
         }
@@ -73,7 +73,7 @@ namespace OOP02
             DeliveryFee = newFee > 0 ? newFee : DeliveryFee;
         }
 
-        public void PrintShipment()
+        public virtual void PrintShipment()
         {
             Console.WriteLine($"The Tracking Code: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
@@ -81,6 +81,16 @@ namespace OOP02
             Console.WriteLine($"Delivery Fee: {DeliveryFee}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost}");
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+        }
+
+        public void UpdateWeight(double weight)
+        {
+            Weight = weight;
+        }
+
+        public void UpdateWeight(double weight, double  packingWeight)
+        {
+            Weight = weight+ packingWeight;
         }
         #endregion
     }
