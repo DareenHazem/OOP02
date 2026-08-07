@@ -449,6 +449,17 @@
             // Dynamic Binding is resolved in the run time the runtime decided by the object type by using(virtual and override)
             #endregion
 
+            #region Question 02
+            //Q2 Sealed Classes and Methods
+            //a) What is the purpose of the sealed keyword when applied to a class?
+            //b) What is the difference between a sealed class and a sealed method?
+            //c) Can a sealed method be overridden? Why?
+
+            //1- To prevent inheritance to other classes 
+            //2- Sealed class means that class prevent inheritance to other classes but sealed method to prevent further overriding
+            //3- No, cuz it prevent further overriding meaning no child classes will have a specific implemantion of the Method
+            #endregion
+
             #endregion
             #endregion
 
