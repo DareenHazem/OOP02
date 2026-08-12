@@ -17,12 +17,19 @@ namespace OOP02
         {
 
         }
+
+        public override decimal EstimatedCost => DeliveryFee + (decimal) (Weight* 5); 
         #endregion
 
         #region Methods
         public override void PrintShipment()
         {
-            base.PrintShipment();
+            Console.WriteLine($"The Tracking Code: {TrackingCode}");
+            Console.WriteLine($"Description: {Description}");
+            Console.WriteLine($"Weight: {Weight}");
+            Console.WriteLine($"Delivery Fee: {DeliveryFee}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost}");
+            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
         }
         #endregion
     }
