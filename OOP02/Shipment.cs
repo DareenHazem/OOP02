@@ -39,10 +39,8 @@ namespace OOP02
             get { return deliveryFee; }
             private set { deliveryFee = value; }
         }
-        public virtual decimal EstimatedCost
-        {
-            get { return DeliveryFee + (decimal)(Weight * 5); }
-        }
+        public abstract decimal EstimatedCost { get; }
+
         #endregion
 
         #region Constructor 
@@ -73,15 +71,8 @@ namespace OOP02
             DeliveryFee = newFee > 0 ? newFee : DeliveryFee;
         }
 
-        public virtual void PrintShipment()
-        {
-            Console.WriteLine($"The Tracking Code: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight}");
-            Console.WriteLine($"Delivery Fee: {DeliveryFee}");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost}");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-        }
+        public abstract void PrintShipment();
+        
 
         public void UpdateWeight(double weight)
         {
