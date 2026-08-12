@@ -530,6 +530,23 @@
 
             #endregion
 
+            #region Assignment 4
+
+            #region Part 01 — Theoretical Questions
+            #region Question 1
+            //Q1 Abstraction
+            //a) What is Abstraction in Object - Oriented Programming?
+            //b) Why is abstraction considered one of the four pillars of OOP ?
+
+            // 1- Abstraction is a process of hiding the implementation and showing only the essential features.
+            // 2- Because it makes the code clean and it reduce complexity(hides the complex implementation of the user),
+            //improve maintainability(I can add methods and make changes in the code and the user won't know), enhance security,
+            //provide flexability(I can add feature and the user uses it without knowing any details).
+            #endregion
+            #endregion
+
+            #endregion
+
 
         }
     }
