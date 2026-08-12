@@ -543,6 +543,18 @@
             //improve maintainability(I can add methods and make changes in the code and the user won't know), enhance security,
             //provide flexability(I can add feature and the user uses it without knowing any details).
             #endregion
+
+            #region Question 2
+            //Q2 Abstract Classes vs. Interfaces
+            //a) What is the difference between an Abstract Class and an Interface?
+            //b) When would you choose an Interface instead of an Abstract Class?
+            //c) Can a class inherit from multiple abstract classes? Can it implement multiple interfaces?
+
+            // 1- In Abstract class can have abstract and concrete methods, In Interface after C# 8 we can have default implementation methods
+            // In Abstract class we have fields, In Interface we don't have fields and we can't make objects so no place to store the data.
+            // 2- If there is Property/Method that is only related to some of the classes and can't be implemented by all the clasess.
+            // 3- No, A class can't inherit from multiple abstract classes. - Yes,it can implement multiple interfaces.
+            #endregion
             #endregion
 
             #endregion
