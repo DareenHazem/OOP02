@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal class ExpressShipment : Shipment
+    internal class ExpressShipment : Shipment, ITrackable
     {
         private decimal extraFee;
 
@@ -39,6 +39,11 @@ namespace OOP02
             Console.WriteLine($"Estimated Cost: {EstimatedCost}");
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
             Console.WriteLine($"Extra Fee: {ExtraFee}");
+        }
+
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Out for Delivery.";
         }
         #endregion
     }
