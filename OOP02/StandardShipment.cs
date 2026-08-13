@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal class StandardShipment:Shipment, ITrackable
+    internal class StandardShipment:Shipment, ITrackable, IInsurable
     {
 
         #region Constructors
@@ -20,10 +20,6 @@ namespace OOP02
         #endregion
         public override decimal EstimatedCost => DeliveryFee + (decimal) (Weight* 5);
 
-        public string GetTrackingStatus()
-        {
-            return $"Shipment {TrackingCode} is Ready.";
-        }
       
 
         #region Methods
@@ -35,6 +31,16 @@ namespace OOP02
             Console.WriteLine($"Delivery Fee: {DeliveryFee}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost}");
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
+        }
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.05m;
+        }
+
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Ready.";
         }
         #endregion
     }
