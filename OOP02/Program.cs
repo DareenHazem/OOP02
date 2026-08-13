@@ -1,4 +1,6 @@
-﻿namespace OOP02
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace OOP02
 {
     internal class Program
     {
@@ -555,6 +557,61 @@
             // 2- If there is Property/Method that is only related to some of the classes and can't be implemented by all the clasess.
             // 3- No, A class can't inherit from multiple abstract classes. - Yes,it can implement multiple interfaces.
             #endregion
+            #endregion
+
+            #region Part 02 - Main
+            //// a. Create one StandardShipment.
+            //StandardShipment SS = new StandardShipment("SH 001", "Order 3", 583.5, 5820, new DeliveryAddress("Cairo", "Street 1", 1));
+
+            //// b. Create one ExpressShipment.
+            //ExpressShipment ES = new ExpressShipment(25, "SH 002", "Order 2", 388.978, 10820, new DeliveryAddress("Giza", "Street 2", 2));
+
+            //// c. Create one InternationalShipment.
+            //InternationalShipment IS = new InternationalShipment("Egypt", 1, "SH 003", "Order 3", 8892.63, 15890, new DeliveryAddress("Alex", "Street 3", 3));
+
+            //// d. Add all shipments to the DeliveryCenter.
+            //DeliveryCenter deliverycenter = new DeliveryCenter();
+            //deliverycenter.AddShipment(SS); 
+            //deliverycenter.AddShipment(ES);
+            //deliverycenter.AddShipment(IS);
+
+            //// e. Print all shipment details.
+            //Console.WriteLine("===========================================");
+            //Console.WriteLine("Delivery Center");
+            //Console.WriteLine("===========================================");
+            //Console.WriteLine("\n============ All Shipment Data ============\n");
+            //deliverycenter.PrintAllShipments();
+
+            //// f. Print the tracking status of every shipment.
+            //Console.WriteLine("\n============ Tracking Statuses ============\n");
+            //deliverycenter.PrintTrackingStatuses();
+
+            //// g. Print the insurance cost of every shipment.
+            //Console.WriteLine("\n===========================================");
+            //Console.WriteLine("Insurance");
+            //Console.WriteLine($"Standard Shipment Insurance : {SS.CalculateInsurance()}");
+            //Console.WriteLine($"Express Shipment Insurance : {ES.CalculateInsurance()}");
+            //Console.WriteLine($"International Shipment Insurance : {IS.CalculateInsurance()}");
+            //Console.WriteLine("===========================================");
+
+            //// h. Store the shipment objects in an ITrackable[] array and print their tracking statuses.
+            //ITrackable[] track = { SS, ES, IS };
+            //DeliveryReport report = new DeliveryReport();
+            //Console.WriteLine("\n===========================================");
+            //Console.WriteLine("Tracking Status");
+            //foreach (ITrackable trackable in track)
+            //{
+            //    report.PrintShipment(trackable);
+            //}
+
+            //// i. Store the shipment objects in an IInsurable[] array and print their insurance values.
+            //IInsurable[] insurance = { SS, ES, IS };
+            //Console.WriteLine("\n===========================================");
+            //Console.WriteLine("Insurance");
+            //foreach (IInsurable insurable in insurance)
+            //{
+            //    report.PrintInsurance(insurable);
+            //}
             #endregion
 
             #endregion

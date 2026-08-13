@@ -27,10 +27,7 @@ namespace OOP02
         {
             Console.WriteLine($"The Tracking Code: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight}");
-            Console.WriteLine($"Delivery Fee: {DeliveryFee}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost}");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
         }
 
         public decimal CalculateInsurance()
