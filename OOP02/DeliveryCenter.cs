@@ -102,5 +102,20 @@ namespace OOP02
         {
             array = new Shipment[20];
         }
+
+        public void PrintTrackingStatuses()
+        {
+            foreach (ITrackable shipment in array)
+            {
+                if (shipment != null)
+                {
+                    Console.WriteLine(shipment.GetTrackingStatus());
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
     }
 }
