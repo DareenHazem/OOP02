@@ -11,7 +11,8 @@ namespace OOP02
         string description;
         double weight;
         decimal deliveryFee;
-
+        // Static Field
+        public static int TotalShipmentsCreated = 0;
         #region Properties
         public DeliveryAddress Destination
         {
@@ -51,7 +52,7 @@ namespace OOP02
             weight = 1;
             deliveryFee = 50;
             Destination = new DeliveryAddress("Unknown", "Unknown", 0); // or Destination = default;
-
+            TotalShipmentsCreated++;
         }
 
         public Shipment(string trackingCode, string description, double weight, decimal deliveryFee, DeliveryAddress destination)
@@ -61,6 +62,7 @@ namespace OOP02
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
         }
 
         #endregion
