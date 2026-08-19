@@ -647,6 +647,21 @@ namespace OOP02
             //4- Reference-type fields, created new references  with their own copies of the nested objects
             //5- To make changes to the copied object without changing the original
             #endregion
+
+            #region Question 3
+            //Q3 Static Members
+            //a) What is a static field, and how is it different from an instance field ?
+            //b) What is a static method? Can a static method directly access instance members?
+            //c) What is a static constructor, and when is it executed ?
+            //d) What is a static class? Can you create an object from a static class?
+
+            //1- Static members belong to the class, not to any instance but instance field belong to the object
+            //2- A static method belongs to the class not to objects, No, It can only access the staic members
+            //3- A static constructor is used to initialize static members 
+            // before 1- any object created 2-any access to static member methods 3- Inhertiance from other classess (any child object is created)
+            //4- A static class is a class that can only contain static members, I cannot create an object from a static class
+
+            #endregion
             #endregion
             #endregion
 
