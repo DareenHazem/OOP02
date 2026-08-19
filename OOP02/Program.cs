@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System.Reflection.Metadata;
+using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OOP02
@@ -661,6 +662,19 @@ namespace OOP02
             // before 1- any object created 2-any access to static member methods 3- Inhertiance from other classess (any child object is created)
             //4- A static class is a class that can only contain static members, I cannot create an object from a static class
 
+            #endregion
+
+            #region Question 4
+            //Q4 Extension Methods
+            //a) What is an Extension Method?
+            //b) What keyword must be used in the first parameter of an extension method
+            //c) Where must an extension method be declared?
+            //d) Can an extension method access private members of the class it extends?
+
+           //1- Extension methods let you "add" new methods to existing types without modifying the original type or creating a new derived type.
+           //2- this
+           //3- In a static class
+           //4- No because it's static and only have access to static members
             #endregion
             #endregion
             #endregion
