@@ -616,6 +616,25 @@ namespace OOP02
 
             #endregion
 
+            #region Assignment 5
+            #region Part 01 — Theoretical Questions
+
+            #region Question 1
+
+            #endregion
+            //Q1 Object Copying
+            //a) What happens when you assign one object variable to another object variable?
+            //b) Does assigning one object to another create a new object? Explain.
+            //c) What is the difference between copying an object and copying its reference ?
+
+            // 1- The 2 objects will have the same reference in the stack and have access to the same data
+            // 2- No, It only copies the reference of the original object to the copy object
+            // 3- Copying an object means creating a new object with the same data
+            // copying its reference means making both variables refer to the same object
+
+            #endregion
+            #endregion
+
 
         }
     }
