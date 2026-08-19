@@ -105,6 +105,11 @@ namespace OOP02
             copy.Destination = Destination is null?new DeliveryAddress("Unknown", "Unknown",0) : new DeliveryAddress(Destination.city, Destination.street, Destination.buildingNumber);
             return copy;
         }
+
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
         #endregion
     }
 }
