@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OOP02
 {
@@ -620,8 +621,6 @@ namespace OOP02
             #region Part 01 — Theoretical Questions
 
             #region Question 1
-
-            #endregion
             //Q1 Object Copying
             //a) What happens when you assign one object variable to another object variable?
             //b) Does assigning one object to another create a new object? Explain.
@@ -631,7 +630,23 @@ namespace OOP02
             // 2- No, It only copies the reference of the original object to the copy object
             // 3- Copying an object means creating a new object with the same data
             // copying its reference means making both variables refer to the same object
+            #endregion
 
+            #region Question 2
+            //Q2 Shallow Copy vs Deep Copy
+            //a) What is a Shallow Copy?
+            //b) What is a Deep Copy?
+            //c) What happens to reference-type members when a Shallow Copy is created?
+            //d) What happens to reference-type members when a Deep Copy is created?
+            //e) Give one situation where Deep Copy would be safer than Shallow Copy.
+
+            //1- A shallow copy creates a new object and copies all value - type fields
+            //but for reference-type fields, only the references are copied both objects point to the same nested objects
+            //2- A deep copy c recursively copies all nested objects the original and the copy are completely independent
+            //3- Reference-type fields, only the references are copied both objects point to the same nested objects
+            //4- Reference-type fields, created new references  with their own copies of the nested objects
+            //5- To make changes to the copied object without changing the original
+            #endregion
             #endregion
             #endregion
 
