@@ -65,6 +65,10 @@ namespace OOP02
             TotalShipmentsCreated++;
         }
 
+        static Shipment()
+        {
+            Console.WriteLine("Shipment System Initialized");
+        }
         #endregion
 
         #region Methods 
