@@ -671,10 +671,74 @@ namespace OOP02
             //c) Where must an extension method be declared?
             //d) Can an extension method access private members of the class it extends?
 
-           //1- Extension methods let you "add" new methods to existing types without modifying the original type or creating a new derived type.
-           //2- this
-           //3- In a static class
-           //4- No because it's static and only have access to static members
+            //1- Extension methods let you "add" new methods to existing types without modifying the original type or creating a new derived type.
+            //2- this
+            //3- In a static class
+            //4- No because it's static and only have access to static members
+            #endregion
+            #endregion
+
+            #region Part 02 — Practical
+            #region Main
+            //DeliveryUtilities.PrintSystemTitle();
+
+            ////  1. Demonstrate reference assignment between two shipment variables / 8. Demonstrate the static constructor
+            //// Static constructor is called automatically before the first Shipment object is created.
+            //StandardShipment SS = new StandardShipment("SH 001", "Order 3", 583.5, 5820, new DeliveryAddress("Cairo", "Street 1", 1));
+            //ExpressShipment ES = new ExpressShipment(25, "SH 002", "Order 2", 388.978, 10820, new DeliveryAddress("Giza", "Street 2", 2));
+            //InternationalShipment IS = new InternationalShipment("Egypt", 1, "SH 003", "Order 3", 8892.63, 15890, new DeliveryAddress("Alex", "Street 3", 3));
+
+            //// 2. Demonstrate that reference assignment does not create a new object
+            //StandardShipment shipment2 = SS;
+            //Console.WriteLine($"Same object: {ReferenceEquals(SS, shipment2)}");
+            //shipment2.Weight = 28597;
+            //Console.WriteLine($"Shipment 1 Weight: {SS.Weight}");
+            //Console.WriteLine($"Shipment 2 Weight: {shipment2.Weight}");
+            //DeliveryUtilities.PrintSeparator();
+
+            //// 3. Create a Shallow Copy using MemberwiseClone()
+            //// 4. Demonstrate that the shallow copy shares the same DeliveryAddress
+            //Console.WriteLine("========= Shallow Copy =========");
+            //StandardShipment shallowCopy = (StandardShipment)SS.ShallowCopy();
+            //Console.WriteLine($"Same object: {ReferenceEquals(SS, shallowCopy)}");
+            //Console.WriteLine($"Same DeliveryAddress object: {ReferenceEquals(SS.Destination, shallowCopy.Destination)}");
+            //Console.WriteLine("\nBefore changing the copy");
+            //Console.WriteLine($"Original City: {SS.Destination.city}");
+            //Console.WriteLine($"Shallow Copy City: {shallowCopy.Destination.city}");
+            //shallowCopy.Destination.city = "Zagazig";
+            //Console.WriteLine("\nAfter changing the copy");
+            //Console.WriteLine($"Original City: {SS.Destination.city}");
+            //Console.WriteLine($"Shallow Copy City: {shallowCopy.Destination.city}");
+            //DeliveryUtilities.PrintSeparator();
+
+            //// 5. Create a Deep Copy
+            //// 6. Demonstrate that the deep copy has an independent DeliveryAddress
+            //Console.WriteLine("========= Deep Copy =========");
+            //StandardShipment deepCopy = (StandardShipment)SS.DeepCopy();
+            //Console.WriteLine($"Same object: {ReferenceEquals(SS, deepCopy)}");
+            //Console.WriteLine($"Same DeliveryAddress object: {ReferenceEquals(SS.Destination, deepCopy.Destination)}");
+            //Console.WriteLine("\nBefore changing the copy");
+            //Console.WriteLine($"Original City: {SS.Destination.city}");
+            //Console.WriteLine($"Deep Copy City: {deepCopy.Destination.city}");
+            //deepCopy.Destination.city = "Alex";
+            //Console.WriteLine("\nAfter changing the copy");
+            //Console.WriteLine($"Original City: {SS.Destination.city}");
+            //Console.WriteLine($"Deep Copy City: {deepCopy.Destination.city}");
+            //DeliveryUtilities.PrintSeparator();
+
+            //// 7. Add and demonstrate the static shipment counter
+            //// 9. Call GetTotalShipmentsCreated()
+            //Console.WriteLine("========= Static Shipment Counter =========");
+            //Console.WriteLine($"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}");
+            //DeliveryUtilities.PrintSeparator();
+
+            //// 11. Create and use ShipmentExtensions
+            //// 12. Demonstrate GetSummary()
+            //// 13. Demonstrate IsDelivered()
+            //Console.WriteLine("========= Extension Methods =========");
+            //Console.WriteLine(IS.GetSummary());
+            //Console.WriteLine($"Is Delivered: {IS.IsDelivered()}");
+            //DeliveryUtilities.PrintSeparator();
             #endregion
             #endregion
             #endregion
