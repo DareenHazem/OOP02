@@ -92,6 +92,13 @@ namespace OOP02
         {
             return (Shipment)this.MemberwiseClone();
         }
+
+        public Shipment DeepCopy()
+        {
+            Shipment copy = (Shipment)MemberwiseClone();
+            copy.Destination = Destination is null?new DeliveryAddress("Unknown", "Unknown",0) : new DeliveryAddress(Destination.city, Destination.street, Destination.buildingNumber);
+            return copy;
+        }
         #endregion
     }
 }
