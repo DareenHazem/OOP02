@@ -83,6 +83,10 @@ namespace OOP02
         {
             Weight = weight+ packingWeight;
         }
+        public Shipment CopyShipment()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
         #endregion
     }
 }
